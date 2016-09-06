@@ -1,6 +1,6 @@
 module App exposing (..)
 
-import Html exposing (Html, div, text)
+import Html exposing (Html, h1, h4, div, text)
 import Html.Attributes exposing (class, style)
 import Html.App
 import Mouse
@@ -65,8 +65,8 @@ view model =
     div [ class "container", style [ ( "margin-top", "50px" ) ] ]
         [ div [ class "row" ]
             [ div [ class "twelve columns" ]
-                [ Html.h1 [] [ text "Elm Counter" ]
-                , Html.h4 [] [ status model ]
+                [ h1 [] [ text "Elm Counter" ]
+                , h4 [] [ status model ]
                 , div [] [ text "count: ", text (toString model.count) ]
                 , div [] [ text "last mouse click: ", text (toString model.position) ]
                 , div [] [ text "last keyboard press: ", text (toString model.keyCode) ]
